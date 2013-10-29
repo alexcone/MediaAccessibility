@@ -12,7 +12,7 @@
 		BEECA1971819A13000F928BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1961819A13000F928BB /* UIKit.framework */; };
 		BEECA19D1819A13000F928BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEECA19B1819A13000F928BB /* InfoPlist.strings */; };
 		BEECA19F1819A13000F928BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA19E1819A13000F928BB /* main.m */; };
-		BEECA1A31819A13000F928BB /* CFABAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA1A21819A13000F928BB /* CFABAppDelegate.m */; };
+		BEECA1A31819A13000F928BB /* HBOMediaAccessibilityAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA1A21819A13000F928BB /* HBOMediaAccessibilityAppDelegate.m */; };
 		BEECA1A61819A13000F928BB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEECA1A41819A13000F928BB /* Main_iPhone.storyboard */; };
 		BEECA1A91819A13000F928BB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEECA1A71819A13000F928BB /* Main_iPad.storyboard */; };
 		BEECA1AC1819A13000F928BB /* CFABViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA1AB1819A13000F928BB /* CFABViewController.m */; };
@@ -22,6 +22,13 @@
 		BEECA1B71819A13000F928BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1961819A13000F928BB /* UIKit.framework */; };
 		BEECA1BF1819A13000F928BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEECA1BD1819A13000F928BB /* InfoPlist.strings */; };
 		BEECA1C11819A13000F928BB /* MediaAccessabilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA1C01819A13000F928BB /* MediaAccessabilityTests.m */; };
+		BEECA1CB1819A2C400F928BB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CA1819A2C400F928BB /* AVFoundation.framework */; };
+		BEECA1CD1819A2E700F928BB /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CC1819A2E700F928BB /* MediaAccessibility.framework */; };
+		BEECA1D11819A30D00F928BB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CE1819A30D00F928BB /* MediaPlayer.framework */; };
+		BEECA1D21819A30D00F928BB /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CF1819A30D00F928BB /* MediaToolbox.framework */; };
+		BEECA1D31819A30D00F928BB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1D01819A30D00F928BB /* SystemConfiguration.framework */; };
+		BEECA1D6181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA1D5181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m */; };
+		BEECA1D7181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA1D5181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +50,8 @@
 		BEECA19C1819A13000F928BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEECA19E1819A13000F928BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BEECA1A01819A13000F928BB /* MediaAccessability-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MediaAccessability-Prefix.pch"; sourceTree = "<group>"; };
-		BEECA1A11819A13000F928BB /* CFABAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFABAppDelegate.h; sourceTree = "<group>"; };
-		BEECA1A21819A13000F928BB /* CFABAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFABAppDelegate.m; sourceTree = "<group>"; };
+		BEECA1A11819A13000F928BB /* HBOMediaAccessibilityAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBOMediaAccessibilityAppDelegate.h; sourceTree = "<group>"; };
+		BEECA1A21819A13000F928BB /* HBOMediaAccessibilityAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBOMediaAccessibilityAppDelegate.m; sourceTree = "<group>"; };
 		BEECA1A51819A13000F928BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		BEECA1A81819A13000F928BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		BEECA1AA1819A13000F928BB /* CFABViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFABViewController.h; sourceTree = "<group>"; };
@@ -55,6 +62,14 @@
 		BEECA1BC1819A13000F928BB /* MediaAccessabilityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MediaAccessabilityTests-Info.plist"; sourceTree = "<group>"; };
 		BEECA1BE1819A13000F928BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEECA1C01819A13000F928BB /* MediaAccessabilityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaAccessabilityTests.m; sourceTree = "<group>"; };
+		BEECA1CA1819A2C400F928BB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BEECA1CC1819A2E700F928BB /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		BEECA1CE1819A30D00F928BB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BEECA1CF1819A30D00F928BB /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
+		BEECA1D01819A30D00F928BB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BEECA1D4181AB28A00F928BB /* HBOMediaAccessabilityDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBOMediaAccessabilityDefaults.h; sourceTree = "<group>"; };
+		BEECA1D5181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBOMediaAccessabilityDefaults.m; sourceTree = "<group>"; };
+		BEFB83101820399400BC7510 /* HBOAvailabilityDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBOAvailabilityDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +77,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEECA1D11819A30D00F928BB /* MediaPlayer.framework in Frameworks */,
+				BEECA1D21819A30D00F928BB /* MediaToolbox.framework in Frameworks */,
+				BEECA1D31819A30D00F928BB /* SystemConfiguration.framework in Frameworks */,
+				BEECA1CD1819A2E700F928BB /* MediaAccessibility.framework in Frameworks */,
+				BEECA1CB1819A2C400F928BB /* AVFoundation.framework in Frameworks */,
 				BEECA1951819A13000F928BB /* CoreGraphics.framework in Frameworks */,
 				BEECA1971819A13000F928BB /* UIKit.framework in Frameworks */,
 				BEECA1931819A13000F928BB /* Foundation.framework in Frameworks */,
@@ -103,6 +123,11 @@
 		BEECA1911819A13000F928BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEECA1CE1819A30D00F928BB /* MediaPlayer.framework */,
+				BEECA1CF1819A30D00F928BB /* MediaToolbox.framework */,
+				BEECA1D01819A30D00F928BB /* SystemConfiguration.framework */,
+				BEECA1CC1819A2E700F928BB /* MediaAccessibility.framework */,
+				BEECA1CA1819A2C400F928BB /* AVFoundation.framework */,
 				BEECA1921819A13000F928BB /* Foundation.framework */,
 				BEECA1941819A13000F928BB /* CoreGraphics.framework */,
 				BEECA1961819A13000F928BB /* UIKit.framework */,
@@ -114,12 +139,15 @@
 		BEECA1981819A13000F928BB /* MediaAccessability */ = {
 			isa = PBXGroup;
 			children = (
-				BEECA1A11819A13000F928BB /* CFABAppDelegate.h */,
-				BEECA1A21819A13000F928BB /* CFABAppDelegate.m */,
+				BEECA1A11819A13000F928BB /* HBOMediaAccessibilityAppDelegate.h */,
+				BEECA1A21819A13000F928BB /* HBOMediaAccessibilityAppDelegate.m */,
+				BEFB83101820399400BC7510 /* HBOAvailabilityDefines.h */,
 				BEECA1A41819A13000F928BB /* Main_iPhone.storyboard */,
 				BEECA1A71819A13000F928BB /* Main_iPad.storyboard */,
 				BEECA1AA1819A13000F928BB /* CFABViewController.h */,
 				BEECA1AB1819A13000F928BB /* CFABViewController.m */,
+				BEECA1D4181AB28A00F928BB /* HBOMediaAccessabilityDefaults.h */,
+				BEECA1D5181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m */,
 				BEECA1AD1819A13000F928BB /* Images.xcassets */,
 				BEECA1991819A13000F928BB /* Supporting Files */,
 			);
@@ -254,8 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEECA1A31819A13000F928BB /* CFABAppDelegate.m in Sources */,
+				BEECA1A31819A13000F928BB /* HBOMediaAccessibilityAppDelegate.m in Sources */,
 				BEECA1AC1819A13000F928BB /* CFABViewController.m in Sources */,
+				BEECA1D6181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m in Sources */,
 				BEECA19F1819A13000F928BB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEECA1D7181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m in Sources */,
 				BEECA1C11819A13000F928BB /* MediaAccessabilityTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +505,7 @@
 				BEECA1C61819A13000F928BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEECA1C71819A13000F928BB /* Build configuration list for PBXNativeTarget "MediaAccessabilityTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +514,7 @@
 				BEECA1C91819A13000F928BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

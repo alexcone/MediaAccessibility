@@ -1,18 +1,19 @@
 //
-//  CFABAppDelegate.m
+//  HBOMediaAccessibilityAppDelegate.h
 //  MediaAccessability
 //
 //  Created by Cone, Alex (HBO-NS) on 10/24/13.
 //  Copyright (c) 2013 Cone, Alex (HBO-NS). All rights reserved.
 //
 
-#import "CFABAppDelegate.h"
+#import "HBOMediaAccessibilityAppDelegate.h"
 
-@implementation CFABAppDelegate
+@implementation HBOMediaAccessibilityAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"%f", NSFoundationVersionNumber);
     return YES;
 }
 							

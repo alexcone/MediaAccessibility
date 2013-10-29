@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4511" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3745"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CFABViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OMf-nE-0KN"/>
+                        <viewControllerLayoutGuide type="bottom" id="9og-Sl-WxW"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Captions &amp; Subtitles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbz-5j-ddf">
+                                <rect key="frame" x="20" y="26" width="157" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Media Accessability Info" translatesAutoresizingMaskIntoConstraints="NO" id="14c-NG-lBe">
+                                <rect key="frame" x="10" y="55" width="747" height="957"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RwA-XM-T6u">
+                                <rect key="frame" x="185" y="20" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.43041036519999998" green="0.67848881090000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBf-bR-upr">
+                                <rect key="frame" x="525" y="20" width="186" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Dump Accessability Info"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rbz-5j-ddf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="8S7-ii-s3l"/>
+                            <constraint firstItem="14c-NG-lBe" firstAttribute="top" secondItem="dBf-bR-upr" secondAttribute="bottom" constant="2" id="IKM-a9-tPG"/>
+                            <constraint firstItem="dBf-bR-upr" firstAttribute="top" secondItem="OMf-nE-0KN" secondAttribute="bottom" id="JyO-V9-gQp"/>
+                            <constraint firstAttribute="trailing" secondItem="dBf-bR-upr" secondAttribute="trailing" constant="57" id="S88-X0-ZWa"/>
+                            <constraint firstItem="RwA-XM-T6u" firstAttribute="top" secondItem="OMf-nE-0KN" secondAttribute="bottom" id="Sac-Ub-laR"/>
+                            <constraint firstItem="14c-NG-lBe" firstAttribute="top" secondItem="dBf-bR-upr" secondAttribute="bottom" constant="2" id="TSC-gR-lYS"/>
+                            <constraint firstItem="rbz-5j-ddf" firstAttribute="top" secondItem="OMf-nE-0KN" secondAttribute="bottom" constant="6" id="eYp-aV-dJK"/>
+                            <constraint firstItem="9og-Sl-WxW" firstAttribute="top" secondItem="14c-NG-lBe" secondAttribute="bottom" constant="12" id="mKC-nu-U1B"/>
+                            <constraint firstItem="14c-NG-lBe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="mgh-FV-t0t"/>
+                            <constraint firstItem="RwA-XM-T6u" firstAttribute="leading" secondItem="rbz-5j-ddf" secondAttribute="trailing" constant="8" id="muV-UE-Fz7"/>
+                            <constraint firstAttribute="trailing" secondItem="14c-NG-lBe" secondAttribute="trailing" constant="11" id="s4n-th-KsY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

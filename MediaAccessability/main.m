@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CFABAppDelegate.h"
+#import "HBOMediaAccessibilityAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([CFABAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([HBOMediaAccessibilityAppDelegate class]));
     }
 }

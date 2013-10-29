@@ -1,5 +1,5 @@
 //
-//  CFABAppDelegate.h
+//  HBOMediaAccessibilityAppDelegate.h
 //  MediaAccessability
 //
 //  Created by Cone, Alex (HBO-NS) on 10/24/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CFABAppDelegate : UIResponder <UIApplicationDelegate>
+@interface HBOMediaAccessibilityAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

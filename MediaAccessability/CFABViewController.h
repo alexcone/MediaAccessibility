@@ -10,4 +10,9 @@
 
 @interface CFABViewController : UIViewController
 
+@property (strong) IBOutlet UITextView *outputTextView;
+
+- (IBAction)toggleCaptioning:(id)sender;
+- (IBAction)updateMediaAccessPrefsDisplay:(id)sender;
+
 @end
