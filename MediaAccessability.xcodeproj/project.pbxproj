@@ -29,6 +29,13 @@
 		BEECA1D31819A30D00F928BB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1D01819A30D00F928BB /* SystemConfiguration.framework */; };
 		BEECA1D6181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA1D5181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m */; };
 		BEECA1D7181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA1D5181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m */; };
+		BEFB831118205EBB00BC7510 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CC1819A2E700F928BB /* MediaAccessibility.framework */; };
+		BEFB831218205EC800BC7510 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1B41819A13000F928BB /* XCTest.framework */; };
+		BEFB831318205ECD00BC7510 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CE1819A30D00F928BB /* MediaPlayer.framework */; };
+		BEFB831418205ECD00BC7510 /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CF1819A30D00F928BB /* MediaToolbox.framework */; };
+		BEFB831518205ECD00BC7510 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1D01819A30D00F928BB /* SystemConfiguration.framework */; };
+		BEFB831618205ECD00BC7510 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CA1819A2C400F928BB /* AVFoundation.framework */; };
+		BEFB831718205ECD00BC7510 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1941819A13000F928BB /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +91,7 @@
 				BEECA1CB1819A2C400F928BB /* AVFoundation.framework in Frameworks */,
 				BEECA1951819A13000F928BB /* CoreGraphics.framework in Frameworks */,
 				BEECA1971819A13000F928BB /* UIKit.framework in Frameworks */,
+				BEFB831218205EC800BC7510 /* XCTest.framework in Frameworks */,
 				BEECA1931819A13000F928BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,7 +100,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFB831618205ECD00BC7510 /* AVFoundation.framework in Frameworks */,
+				BEFB831118205EBB00BC7510 /* MediaAccessibility.framework in Frameworks */,
+				BEFB831518205ECD00BC7510 /* SystemConfiguration.framework in Frameworks */,
+				BEFB831718205ECD00BC7510 /* CoreGraphics.framework in Frameworks */,
+				BEFB831318205ECD00BC7510 /* MediaPlayer.framework in Frameworks */,
 				BEECA1B51819A13000F928BB /* XCTest.framework in Frameworks */,
+				BEFB831418205ECD00BC7510 /* MediaToolbox.framework in Frameworks */,
 				BEECA1B71819A13000F928BB /* UIKit.framework in Frameworks */,
 				BEECA1B61819A13000F928BB /* Foundation.framework in Frameworks */,
 			);
@@ -230,11 +244,6 @@
 				CLASSPREFIX = CFAB;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Cone, Alex (HBO-NS)";
-				TargetAttributes = {
-					BEECA1B21819A13000F928BB = {
-						TestTargetID = BEECA18E1819A13000F928BB;
-					};
-				};
 			};
 			buildConfigurationList = BEECA18A1819A12F00F928BB /* Build configuration list for PBXProject "MediaAccessability" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -423,6 +432,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MediaAccessability/MediaAccessability-Prefix.pch";
 				INFOPLIST_FILE = "MediaAccessability/MediaAccessability-Info.plist";
@@ -436,6 +449,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MediaAccessability/MediaAccessability-Prefix.pch";
 				INFOPLIST_FILE = "MediaAccessability/MediaAccessability-Info.plist";
@@ -448,7 +465,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MediaAccessability.app/MediaAccessability";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -462,7 +478,6 @@
 				);
 				INFOPLIST_FILE = "MediaAccessabilityTests/MediaAccessabilityTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -471,7 +486,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MediaAccessability.app/MediaAccessability";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -481,7 +495,6 @@
 				GCC_PREFIX_HEADER = "MediaAccessability/MediaAccessability-Prefix.pch";
 				INFOPLIST_FILE = "MediaAccessabilityTests/MediaAccessabilityTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

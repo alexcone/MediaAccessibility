@@ -24,6 +24,7 @@
 
 + (MACaptionAppearanceDisplayType) displayTypeForDomain:(MACaptionAppearanceDomain) domain;
 + (MACaptionAppearanceDisplayType) displayType;
++ (NSString *)descriptionForDisplayType: (MACaptionAppearanceDisplayType)captionDisplayType;
 + (void)setDisplayType:(MACaptionAppearanceDisplayType)displayType forDomain:(MACaptionAppearanceDomain) domain;
 + (void)setDisplayType:(MACaptionAppearanceDisplayType)displayType;
 

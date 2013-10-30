@@ -26,9 +26,21 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testToggle
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    MACaptionAppearanceDisplayType initialDisplayType = [HBOMediaAccessabilityDefaults displayType];
+    if (initialDisplayType != kMACaptionAppearanceDisplayTypeForcedOnly) {
+        [HBOMediaAccessabilityDefaults setDisplayType:kMACaptionAppearanceDisplayTypeForcedOnly];
+    } else {
+        [HBOMediaAccessabilityDefaults setDisplayType:kMACaptionAppearanceDisplayTypeAlwaysOn];
+    }
+    MACaptionAppearanceDisplayType finalDisplayType = [HBOMediaAccessabilityDefaults displayType];
+    
+    NSString *initialTypeDesc = [HBOMediaAccessabilityDefaults descriptionForDisplayType: initialDisplayType];
+    NSString *finalTypeDesc = [HBOMediaAccessabilityDefaults descriptionForDisplayType: finalDisplayType];
+
+    XCTAssertNotEqual(initialDisplayType, finalDisplayType, @"Switched display type from %@ to %@", initialTypeDesc, finalTypeDesc);
+//    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end
