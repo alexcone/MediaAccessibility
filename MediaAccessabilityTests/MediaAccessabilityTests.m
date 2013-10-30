@@ -10,6 +10,8 @@
 
 @interface MediaAccessabilityTests : XCTestCase
 
+@property   (nonatomic, assign) MACaptionAppearanceDisplayType initialDisplayType;
+
 @end
 
 @implementation MediaAccessabilityTests
@@ -18,28 +20,34 @@
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.initialDisplayType = [HBOMediaAccessabilityDefaults displayType];
 }
 
 - (void)tearDown
 {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [HBOMediaAccessabilityDefaults setDisplayType:self.initialDisplayType];
+
     [super tearDown];
 }
 
 - (void)testToggle
 {
-    MACaptionAppearanceDisplayType initialDisplayType = [HBOMediaAccessabilityDefaults displayType];
-    if (initialDisplayType != kMACaptionAppearanceDisplayTypeForcedOnly) {
+    NSString *targetTypeDesc;
+    MACaptionAppearanceDisplayType aDisplayType = [HBOMediaAccessabilityDefaults displayType];
+    if (aDisplayType != kMACaptionAppearanceDisplayTypeForcedOnly) {
         [HBOMediaAccessabilityDefaults setDisplayType:kMACaptionAppearanceDisplayTypeForcedOnly];
+        targetTypeDesc = [HBOMediaAccessabilityDefaults descriptionForDisplayType: kMACaptionAppearanceDisplayTypeForcedOnly];
     } else {
         [HBOMediaAccessabilityDefaults setDisplayType:kMACaptionAppearanceDisplayTypeAlwaysOn];
+        targetTypeDesc = [HBOMediaAccessabilityDefaults descriptionForDisplayType: kMACaptionAppearanceDisplayTypeAlwaysOn];
     }
     MACaptionAppearanceDisplayType finalDisplayType = [HBOMediaAccessabilityDefaults displayType];
     
-    NSString *initialTypeDesc = [HBOMediaAccessabilityDefaults descriptionForDisplayType: initialDisplayType];
+    NSString *initialTypeDesc = [HBOMediaAccessabilityDefaults descriptionForDisplayType: aDisplayType];
     NSString *finalTypeDesc = [HBOMediaAccessabilityDefaults descriptionForDisplayType: finalDisplayType];
 
-    XCTAssertNotEqual(initialDisplayType, finalDisplayType, @"Switched display type from %@ to %@", initialTypeDesc, finalTypeDesc);
+    XCTAssertNotEqual(aDisplayType, finalDisplayType, @"Failure switching display type from %@ to %@ - got %@", initialTypeDesc, targetTypeDesc, finalTypeDesc);
 //    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 

@@ -34,7 +34,7 @@
 }
 
 + (NSString *)descriptionForDisplayType: (MACaptionAppearanceDisplayType)captionDisplayType {
-    return (captionDisplayType==0?@"Do not display captions unless they are forced for translation":(captionDisplayType==1?@"If the language of the audio track differs from the system locale, then captions matching the system locale should be displayed (if available). If the language of the audio and the language of the system locale match, no captions are shown":@"The most robust available captioning track should always be displayed, whether subtitles, CC, or SDH"));
+    return (captionDisplayType==kMACaptionAppearanceDisplayTypeForcedOnly?@"kMACaptionAppearanceDisplayTypeForcedOnly: Do not display captions unless they are forced for translation":(captionDisplayType==kMACaptionAppearanceDisplayTypeAutomatic?@"kMACaptionAppearanceDisplayTypeAutomatic: If the language of the audio track differs from the system locale, then captions matching the system locale should be displayed (if available). If the language of the audio and the language of the system locale match, no captions are shown":@"kMACaptionAppearanceDisplayTypeAlwaysOn: The most robust available captioning track should always be displayed, whether subtitles, CC, or SDH"));
 }
 + (void)setDisplayType:(MACaptionAppearanceDisplayType)displayType forDomain:(MACaptionAppearanceDomain) domain {
     MACaptionAppearanceSetDisplayType(domain, displayType);
