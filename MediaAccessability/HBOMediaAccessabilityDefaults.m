@@ -66,7 +66,7 @@
 }
 
 + (bool)addSelectedLanguage:(NSString *)languageIdentifier forDomain:(MACaptionAppearanceDomain) domain {
-    return MACaptionAppearanceAddSelectedLanguage(domain, (CFStringRef)CFBridgingRetain(languageIdentifier));
+    return MACaptionAppearanceAddSelectedLanguage(domain, (__bridge CFStringRef)(languageIdentifier));
 }
 + (bool)addSelectedLanguage:(NSString *)languageIdentifier {
     return [HBOMediaAccessabilityDefaults addSelectedLanguage:languageIdentifier forDomain:kMACaptionAppearanceDomainUser];
@@ -117,6 +117,7 @@
     CGColorRef colorRef = MACaptionAppearanceCopyForegroundColor(domain, &behavior);
     infoDict[@"kAppearanceBehavior"] = [NSNumber numberWithUnsignedInt:behavior];
     UIColor* color = [UIColor colorWithCGColor:colorRef];
+    CGColorRelease(colorRef);
 //    CGFloat alpha1 = CGColorGetAlpha(colorRef);
     CGFloat alpha2 = MACaptionAppearanceGetForegroundOpacity(domain, &behavior);
     
@@ -171,6 +172,8 @@
     CGColorRef colorRef = MACaptionAppearanceCopyBackgroundColor(domain, &behavior);
     infoDict[@"kAppearanceBehavior"] = [NSNumber numberWithUnsignedInt:behavior];
     UIColor* color = [UIColor colorWithCGColor:colorRef];
+    CGColorRelease(colorRef);
+
 //    CGFloat alpha1 = CGColorGetAlpha(colorRef);
     CGFloat alpha2 = MACaptionAppearanceGetBackgroundOpacity(domain, &behavior);
     
@@ -192,6 +195,8 @@
     CGColorRef colorRef = MACaptionAppearanceCopyWindowColor(domain, &behavior);
     infoDict[@"kAppearanceBehavior"] = [NSNumber numberWithUnsignedInt:behavior];
     UIColor* color = [UIColor colorWithCGColor:colorRef];
+    CGColorRelease(colorRef);
+
 //    CGFloat alpha1 = CGColorGetAlpha(colorRef);
     CGFloat alpha2 = MACaptionAppearanceGetWindowOpacity(domain, &behavior);
     
@@ -233,7 +238,7 @@
     MACaptionAppearanceDisplayType captionDisplayType = MACaptionAppearanceGetDisplayType(domain);
     NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
     tmpDict[@"kValue"] = @(captionDisplayType);
-    tmpDict[@"kAescription"] = (captionDisplayType==0?@"Do not display captions unless they are forced for translation":(captionDisplayType==1?@"If the language of the audio track differs from the system locale, then captions matching the system locale should be displayed (if available). If the language of the audio and the language of the system locale match, no captions are shown":@"The most robust available captioning track should always be displayed, whether subtitles, CC, or SDH"));
+    tmpDict[@"kDescription"] = [HBOMediaAccessabilityDefaults descriptionForDisplayType:captionDisplayType];
     infoDict[@"kDisplayType"] = tmpDict;
 
     anArray = [HBOMediaAccessabilityDefaults selectedLanguagesForDomain:domain];
@@ -289,17 +294,17 @@
         tmpDict = [NSMutableDictionary dictionaryWithDictionary:aDict];
         MACaptionAppearanceTextEdgeStyle style = [aDict[@"kAppearanceTextEdgeStyle"] integerValue];
         if (style == kMACaptionAppearanceTextEdgeStyleNone) {
-            tmpDict[@"kAescription"] = @"The text should not have a styled edge";
+            tmpDict[@"kDescription"] = @"The text should not have a styled edge";
         } else if (style == kMACaptionAppearanceTextEdgeStyleRaised) {
-            tmpDict[@"kAescription"] = @"An edge makes the text appear to rise above the background";
+            tmpDict[@"kDescription"] = @"An edge makes the text appear to rise above the background";
         } else if (style == kMACaptionAppearanceTextEdgeStyleDepressed) {
-            tmpDict[@"kAescription"] = @"An edge makes the text appear pushed in";
+            tmpDict[@"kDescription"] = @"An edge makes the text appear pushed in";
         } else if (style == kMACaptionAppearanceTextEdgeStyleUniform) {
-            tmpDict[@"kAescription"] = @"A thin outline lies along the edge of the text";
+            tmpDict[@"kDescription"] = @"A thin outline lies along the edge of the text";
         } else if (style == kMACaptionAppearanceTextEdgeStyleDropShadow) {
-            tmpDict[@"kAescription"] = @"An edge makes the text appear to float above the background";
+            tmpDict[@"kDescription"] = @"An edge makes the text appear to float above the background";
         } else {
-            tmpDict[@"kAescription"] = @"An edge style has not been specified";
+            tmpDict[@"kDescription"] = @"An edge style has not been specified";
         }
         infoDict[@"kEdgeStyleInfo"] = tmpDict;
     }
