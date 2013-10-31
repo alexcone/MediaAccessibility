@@ -30,7 +30,6 @@
 		BEECA1D6181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA1D5181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m */; };
 		BEECA1D7181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = BEECA1D5181AB28A00F928BB /* HBOMediaAccessabilityDefaults.m */; };
 		BEFB831118205EBB00BC7510 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CC1819A2E700F928BB /* MediaAccessibility.framework */; };
-		BEFB831218205EC800BC7510 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1B41819A13000F928BB /* XCTest.framework */; };
 		BEFB831318205ECD00BC7510 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CE1819A30D00F928BB /* MediaPlayer.framework */; };
 		BEFB831418205ECD00BC7510 /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1CF1819A30D00F928BB /* MediaToolbox.framework */; };
 		BEFB831518205ECD00BC7510 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEECA1D01819A30D00F928BB /* SystemConfiguration.framework */; };
@@ -91,7 +90,6 @@
 				BEECA1CB1819A2C400F928BB /* AVFoundation.framework in Frameworks */,
 				BEECA1951819A13000F928BB /* CoreGraphics.framework in Frameworks */,
 				BEECA1971819A13000F928BB /* UIKit.framework in Frameworks */,
-				BEFB831218205EC800BC7510 /* XCTest.framework in Frameworks */,
 				BEECA1931819A13000F928BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
